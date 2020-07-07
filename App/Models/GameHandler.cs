@@ -9,7 +9,7 @@ namespace golf_card.Models
     public void ViewCourses()
     {
       int courseCount = 1;
-      Console.WriteLine("Courses:");
+      Console.WriteLine("\nCourses:");
       List<Course> courses = Courses;
       foreach (var course in courses)
       {
@@ -22,7 +22,7 @@ namespace golf_card.Models
       Console.Clear();
       ViewCourses();
       int choice = 0;
-      Console.WriteLine("Select Course [Enter Course Number]");
+      Console.WriteLine("\nSelect Course [Enter Course Number]");
       Int32.TryParse(Console.ReadLine(), out choice);
       while (choice < 1 || choice > Courses.Count)
       {
@@ -32,7 +32,7 @@ namespace golf_card.Models
       List<Course> courses = Courses;
       Course info = courses[choice - 1];
       Console.WriteLine($"You chose {info.Name} - {info.Description} - {info.Holes}");
-      Console.WriteLine("How many players? [1-4]");
+      Console.WriteLine("\nHow many players? [1-4]");
       Int32.TryParse(Console.ReadLine(), out choice);
       while (choice < 1 || choice > 4)
       {
@@ -43,10 +43,10 @@ namespace golf_card.Models
       String[] players = new string[choice];
       for (int i = 0; i < choice; i++)
       {
-        Console.WriteLine($"Player{i + 1} Name:");
+        Console.WriteLine($"\nPlayer{i + 1} Name:");
         players[i] = Console.ReadLine();
       }
-      Console.WriteLine("Players: ");
+      Console.WriteLine("\nPlayers: ");
       for (int i = 0; i < choice; i++)
       {
         Console.Write($"{players[i]} ");
@@ -57,7 +57,8 @@ namespace golf_card.Models
     public void ViewScores()
     {
       Console.Clear();
-      Console.WriteLine("Find game");
+      Console.WriteLine("Display games");
+      Console.WriteLine("Select game");
       Console.WriteLine("Tally Scores by player");
       Console.WriteLine("Display Game Stats.");
       Console.ReadLine();

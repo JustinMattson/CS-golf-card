@@ -36,7 +36,7 @@ namespace golf_card
     public void DisplayMainMenu()
     {
       GameHandler.ViewCourses();
-      Console.WriteLine("\nWhat would you like to do? ([N]ew Game, [V]iew Scores, [Q]uit");
+      Console.WriteLine("\nWhat would you like to do? [N]ew Game, [V]iew Scores, [Q]uit");
       ProcessInput();
     }
 
