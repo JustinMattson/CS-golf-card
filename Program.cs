@@ -12,6 +12,7 @@ namespace golf_card
       app.Run();
       Console.Clear();
       Console.WriteLine("Thanks for using my golf-card app!");
+      System.Console.WriteLine("");
     }
   }
 }

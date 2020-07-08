@@ -36,7 +36,8 @@ namespace golf_card
     public void DisplayMainMenu()
     {
       GameHandler.ViewCourses();
-      Console.WriteLine("\nWhat would you like to do? [N]ew Game, [V]iew Scores, [Q]uit");
+      Console.WriteLine("\nWhat would you like to do? ");
+      System.Console.WriteLine("[N]ew Game or [Q]uit"); //[V]iew Scores, 
       ProcessInput();
     }
 
@@ -55,7 +56,7 @@ namespace golf_card
           GameRunning = false;
           break;
         default:
-          Console.WriteLine("Please enter [n]ew Game, [v]iew Scores, or [q]uit");
+          Console.WriteLine("Please enter [n]ew or [q]uit"); // [v]iew Scores, 
           ProcessInput();
           break;
       }
